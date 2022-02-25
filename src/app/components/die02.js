@@ -17,5 +17,5 @@ content.innerHTML = `
 document.body.appendChild(content);
 
 document.body.appendChild(footer([
-    { content: 'Intentar De Nuevo ', src: 'index.html' }
+    { content: 'Intentar De Nuevo ', src: '/src/index.html' }
 ]));

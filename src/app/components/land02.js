@@ -15,5 +15,5 @@ content.innerHTML = `
 document.body.appendChild(content);
 
 document.body.appendChild(footer([
-  { content: 'Volver a jugar ', src: 'index.html' }
+  { content: 'Volver a jugar ', src: '/src/index.html' }
 ]));
