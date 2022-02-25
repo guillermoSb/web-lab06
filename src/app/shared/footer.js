@@ -8,7 +8,7 @@ const footer = (links) => {
         linkContainer.innerHTML = link.content + ' &rarr;';
         liContainer.appendChild(linkContainer);
         return liContainer;
-    })
+    });
     for (const link of links) {
         ulContainer.appendChild(link);
     }
