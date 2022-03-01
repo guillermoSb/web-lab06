@@ -1,4 +1,5 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const path = require('path');
 const { merge } = require("webpack-merge");
 const common = require('./webpack.common');
@@ -10,7 +11,7 @@ module.exports = merge(common, {
             {
                 test: /\.s[ac]ss$/i,
                 use: [
-                    "style-loader", // Agregar estilos a un archivo
+                    MiniCssExtractPlugin.loader, // Agregar estilos a un archivo
                     "css-loader", // Convertir css a js
                     "sass-loader" // Convertir sass a css
                 ],
@@ -18,12 +19,17 @@ module.exports = merge(common, {
             {
                 test: /\.css$/i,
                 use: [
-                    "style-loader", // Agregar estilos a un archivo
+                    MiniCssExtractPlugin.loader, // Agregar estilos a un archivo
                     "css-loader", // Convertir css a js
                 ],
             },
         ]
     },
+    plugins: [
+        new MiniCssExtractPlugin({
+            filename: '[name].[hash].css'
+        }),
+    ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js'

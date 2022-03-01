@@ -1,6 +1,4 @@
 const { header, footer, progressBar } = require("../shared/shared");
-import '../main.scss';
-
 
 document.body.appendChild(
   header()
