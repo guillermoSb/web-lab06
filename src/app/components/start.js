@@ -1,8 +1,10 @@
+const { header, footer, progressBar } = require("../shared/shared");
+
+
 
 document.body.appendChild(
   header()
 );
-
 document.body.appendChild(progressBar(0))
 
 const content = document.createElement('section');
@@ -24,7 +26,7 @@ content.innerHTML = `
 document.body.appendChild(content);
 
 document.body.appendChild(footer([
-  { content: 'Intentar Comunicación con la Tierra ', src: 'app/templates/die01.html' },
-  { content: 'Restaurar Presión en la Cabina ', src: 'app/templates/phase01.html' },
-  { content: 'Utilizar el telescopio ', src: 'app/templates/die01.html' }
+  { content: 'Intentar Comunicación con la Tierra ', src: 'die01.html' },
+  { content: 'Restaurar Presión en la Cabina ', src: 'phase01.html' },
+  { content: 'Utilizar el telescopio ', src: 'die01.html' }
 ]));

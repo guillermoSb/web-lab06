@@ -1,3 +1,5 @@
+const { header, footer, progressBar } = require("../shared/shared");
+
 document.body.appendChild(header());
 
 document.body.appendChild(progressBar(100))
@@ -17,5 +19,5 @@ content.innerHTML = `
 document.body.appendChild(content);
 
 document.body.appendChild(footer([
-    { content: 'Intentar De Nuevo ', src: '/src/index.html' }
+    { content: 'Intentar De Nuevo ', src: 'index.html' }
 ]));

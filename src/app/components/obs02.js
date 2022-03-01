@@ -1,3 +1,4 @@
+const { header, footer, progressBar } = require("../shared/shared");
 
 document.body.appendChild(header());
 

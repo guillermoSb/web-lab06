@@ -1,4 +1,5 @@
-const footer = (links) => {
+
+export const footer = (links) => {
     const footerContainer = document.createElement('footer');
     const ulContainer = document.createElement('ul');
     links = links.map(link => {

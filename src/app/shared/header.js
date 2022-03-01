@@ -1,4 +1,4 @@
-const header = () => {
+export const header = () => {
   const headerContainer = document.createElement('header');   // Create header document
   headerContainer.innerHTML = `
     <h1>Perdido en el espacio 🚀</h1>
