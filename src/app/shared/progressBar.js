@@ -1,14 +1,14 @@
 export const progressBar = (value) => {
+    const progressContainer = document.createElement('div');
+    progressContainer.className = "container-fluid"
     const progressBarDiv = document.createElement('div');
-    progressBarDiv.classList = ['container-fluid'];
+    progressBarDiv.className = "progress";
     progressBarDiv.classList.add('animate__animated');
     progressBarDiv.classList.add('animate__fadeIn');
-    const progressBarSpan = document.createElement('span');
-    progressBarSpan.innerHTML = 'Tu Progreso</br>';
-    const progressBar = document.createElement('progress');
-    progressBar.max = 100;
-    progressBar.value = value;
-    progressBarDiv.appendChild(progressBarSpan);
-    progressBarDiv.appendChild(progressBar);
-    return progressBarDiv;
+    progressBarDiv.innerHTML = `
+          <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: ${value}%" aria-valuenow="${value}" aria-valuemin="0" aria-valuemax="100"></div>
+
+    `;
+    progressContainer.appendChild(progressBarDiv);
+    return progressContainer;
 }
