@@ -5,6 +5,8 @@ document.body.appendChild(header());
 document.body.appendChild(progressBar(20))
 
 const content = document.createElement('section');
+content.classList.add('container-fluid');
+content.classList.add('my-5');
 content.innerHTML = `
       <h2>Cabina de Energía</h2>
       <p>

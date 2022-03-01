@@ -17,60 +17,79 @@ module.exports = {
         obs02: '/src/app/components/obs02.js',
         phase01: '/src/app/components/phase01.js',
         phase02: '/src/app/components/phase02.js',
+        vendor: '/src/app/vendor.js'
     },
-
+    module: {
+        rules: [
+            {
+                test: /\.s[ac]ss$/i,
+                use: [
+                    "style-loader", // Agregar estilos a un archivo
+                    "css-loader", // Convertir css a js
+                    "sass-loader" // Convertir sass a css
+                ],
+            },
+            {
+                test: /\.css$/i,
+                use: [
+                    "style-loader", // Agregar estilos a un archivo
+                    "css-loader", // Convertir css a js
+                ],
+            },
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            chunks: ['start']
+            chunks: ['vendor', 'start']
         }),
         new HtmlWebpackPlugin({
             filename: 'die01.html',
-            chunks: ['die01']
+            chunks: ['vendor', 'die01']
         }),
         new HtmlWebpackPlugin({
             filename: 'die02.html',
-            chunks: ['die02']
+            chunks: ['vendor', 'die02',]
         }),
         new HtmlWebpackPlugin({
             filename: 'energy01.html',
-            chunks: ['energy01']
+            chunks: ['vendor', 'energy01',]
         }),
         new HtmlWebpackPlugin({
             filename: 'escape01.html',
-            chunks: ['escape01']
+            chunks: ['vendor', 'escape01',]
         }),
         new HtmlWebpackPlugin({
             filename: 'eva01.html',
-            chunks: ['eva01']
+            chunks: ['vendor', 'eva01',]
         }),
         new HtmlWebpackPlugin({
             filename: 'land01.html',
-            chunks: ['land01']
+            chunks: ['vendor', 'land01',]
         }),
         new HtmlWebpackPlugin({
             filename: 'land02.html',
-            chunks: ['land02']
+            chunks: ['vendor', 'land02',]
         }),
         new HtmlWebpackPlugin({
             filename: 'land03.html',
-            chunks: ['land03']
+            chunks: ['vendor', 'land03',]
         }),
         new HtmlWebpackPlugin({
             filename: 'obs01.html',
-            chunks: ['obs01']
+            chunks: ['vendor', 'obs01',]
         }),
         new HtmlWebpackPlugin({
             filename: 'obs02.html',
-            chunks: ['obs02']
+            chunks: ['vendor', 'obs02',]
         }),
         new HtmlWebpackPlugin({
             filename: 'phase01.html',
-            chunks: ['phase01']
+            chunks: ['vendor', 'phase01',]
         }),
         new HtmlWebpackPlugin({
             filename: 'phase02.html',
-            chunks: ['phase02']
+            chunks: ['vendor', 'phase02',]
         }),
         new CleanWebpackPlugin()
     ]

@@ -1,5 +1,5 @@
 const { header, footer, progressBar } = require("../shared/shared");
-
+import '../main.scss';
 
 
 document.body.appendChild(
@@ -8,6 +8,8 @@ document.body.appendChild(
 document.body.appendChild(progressBar(0))
 
 const content = document.createElement('section');
+content.classList.add('container-fluid');
+content.classList.add('my-5');
 content.innerHTML = `
       <h2>Piensa Rápido</h2>
       <p>

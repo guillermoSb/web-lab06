@@ -1,18 +1,22 @@
 
 export const footer = (links) => {
     const footerContainer = document.createElement('footer');
-    const ulContainer = document.createElement('ul');
+    footerContainer.classList = ['container-fluid'];
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'd-grid gap-2 d-md-flex justify-content-md-center'
     links = links.map(link => {
-        const liContainer = document.createElement('li');
         const linkContainer = document.createElement('a');
         linkContainer.setAttribute('href', link.src);
+        linkContainer.classList.add('btn');
+        linkContainer.classList.add('btn-primary');
+        linkContainer.classList.add('animate__animated')
+        linkContainer.classList.add('animate__bounce')
         linkContainer.innerHTML = link.content + ' &rarr;';
-        liContainer.appendChild(linkContainer);
-        return liContainer;
+        return linkContainer;
     });
     for (const link of links) {
-        ulContainer.appendChild(link);
+        buttonContainer.appendChild(link);
     }
-    footerContainer.appendChild(ulContainer);
+    footerContainer.appendChild(buttonContainer);
     return footerContainer;
 }
