@@ -1,4 +1,4 @@
-import '../vendor';
+
 export const header = () => {
   const headerContainer = document.createElement('header');   // Create header document
   headerContainer.classList = ['container-fluid'];

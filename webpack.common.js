@@ -19,25 +19,6 @@ module.exports = {
         phase02: '/src/app/components/phase02.js',
         vendor: '/src/app/vendor.js'
     },
-    module: {
-        rules: [
-            {
-                test: /\.s[ac]ss$/i,
-                use: [
-                    "style-loader", // Agregar estilos a un archivo
-                    "css-loader", // Convertir css a js
-                    "sass-loader" // Convertir sass a css
-                ],
-            },
-            {
-                test: /\.css$/i,
-                use: [
-                    "style-loader", // Agregar estilos a un archivo
-                    "css-loader", // Convertir css a js
-                ],
-            },
-        ]
-    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
