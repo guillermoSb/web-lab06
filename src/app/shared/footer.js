@@ -1,13 +1,16 @@
 
 export const footer = (links) => {
     const footerContainer = document.createElement('footer');
-    footerContainer.classList = ['container-fluid'];
+    footerContainer.classList = ['container'];
+    footerContainer.classList.add('my-5')
     const buttonContainer = document.createElement('div');
-    buttonContainer.className = 'd-grid gap-2 d-md-flex justify-content-md-center'
+    buttonContainer.className = 'row justify-content-md-center'
     links = links.map(link => {
         const linkContainer = document.createElement('a');
         linkContainer.setAttribute('href', link.src);
+        linkContainer.classList.add('col-3');
         linkContainer.classList.add('btn');
+        linkContainer.classList.add('mx-4');
         linkContainer.classList.add('btn-primary');
         linkContainer.classList.add('animate__animated')
         linkContainer.classList.add('animate__bounce')
