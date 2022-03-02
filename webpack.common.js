@@ -19,6 +19,20 @@ module.exports = {
         phase02: '/src/app/components/phase02.js',
         main: '/src/app/main.scss'
     },
+    module: {
+        rules: [
+            {
+                test: /\.m?js$/,
+                exclude: /(node_modules)/,
+                use: {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: ['@babel/preset-env']
+                    }
+                }
+            }
+        ]
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
