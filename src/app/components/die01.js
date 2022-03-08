@@ -1,7 +1,9 @@
 const { header, footer, progressBar } = require("../shared/shared");
 
 
-document.body.appendChild(header());
+document.body.appendChild(
+  header("Sara")
+);
 
 document.body.appendChild(progressBar(100))
 
@@ -20,6 +22,10 @@ content.innerHTML = `
 
 document.body.appendChild(content);
 
-document.body.appendChild(footer([
-  { content: 'Intentar De Nuevo ', src: 'index.html' }
-]));
+document.body.appendChild(
+  footer(
+    [
+      { content: 'Intentar De Nuevo ', src: 'index.html' }
+    ]
+  )
+);

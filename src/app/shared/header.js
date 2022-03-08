@@ -1,11 +1,11 @@
 
-export const header = () => {
+export const header = (nombre = "Guille") => {
   const headerContainer = document.createElement('header');   // Create header document
   headerContainer.classList = ['container-fluid'];
   headerContainer.innerHTML = `
     <h1 class="animate__animated animate__fadeIn">Perdido en el espacio 🚀</h1>
       <details class="animate__animated animate__lightSpeedInLeft">
-        <summary>Reglas del juego</summary>
+        <summary>Reglas del juego [Version ${__VERSION__}]</summary>
         <p>
           Este es un juego de aventura, el objetivo es terminar la historia
           correctamente :).
