@@ -10,4 +10,7 @@ const presets = [
             }
         }
     ]
-]
+];
+const plugins = [
+    "version"
+];

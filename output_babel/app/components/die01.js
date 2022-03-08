@@ -4,7 +4,7 @@ const {
   progressBar
 } = require("../shared/shared");
 
-document.body.appendChild(header());
+document.body.appendChild(header("Sara"));
 document.body.appendChild(progressBar(100));
 const content = document.createElement('section');
 content.classList.add('container-fluid');
